@@ -113,8 +113,6 @@ onSnapshot(colRef, (snapshot) => {
             let loveQuantity = posts[idx].love;
             let isLovedBy = posts[idx].isLoved;
             const isMatched = isLovedBy?.some((lovedBy) => lovedBy.uid === parsedUser.uid)
-
-
             postId = id;
             const postRef = doc(db, "posts", id);
 
