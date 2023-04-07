@@ -23,7 +23,7 @@ const userInfoContainer = document.querySelector('.user-navbar') as HTMLElement;
 const storage = getStorage();
 const auth = getAuth();
 
-if (!user) window.location.href = '/';
+if (!user) window.location.href = '../../index.html';
 
 if (user) {
     userName.innerHTML = parsedUser.name || parsedUser.displayName || parsedUser.email.split("@")[0];
@@ -115,9 +115,8 @@ const showProfile = () => {
                                                     deleteUser(user).then(() => {
                                                         clearPostsAfterDelete(value)
                                                         deleteDoc(userRef).then(() => {
-                                                            window.location.href = '/'
                                                             localStorage.removeItem('user');
-                                                            console.log('User deleted');
+                                                            window.location.href = '../../index.html';
                                                         });
 
                                                     })
@@ -142,11 +141,10 @@ const showProfile = () => {
 
                                         reauthenticateWithCredential(user, credential).then(() => {
                                             deleteUser(user).then(() => {
-                                                clearPostsAfterDelete(value); 
+                                                clearPostsAfterDelete(value);
                                                 deleteDoc(userRef).then(() => {
-                                                    window.location.href = '/'
                                                     localStorage.removeItem('user');
-                                                    console.log('User deleted');
+                                                    window.location.href = '../../index.html';
                                                 });
                                             })
                                         }).catch((error) => {
@@ -209,8 +207,8 @@ const clearPostsAfterDelete = async (id: string) => {
 
 signOutBtn.addEventListener('click', () => {
     signOut(auth).then(() => {
-        window.location.href = '/';
         localStorage.removeItem('user');
+        window.location.href = '../../index.html';
     }).catch((error) => {
         console.log(error.message);
     })

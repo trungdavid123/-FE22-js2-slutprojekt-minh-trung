@@ -49,7 +49,7 @@ const userInfoContainer = document.querySelector('.user-navbar') as HTMLElement;
 let postId = "";
 const usersRef = collection(db, 'users');
 
-if (!user) window.location.href = '/';
+if (!user) window.location.href = '../../index.html';
 
 if (user) {
     userName.innerHTML = parsedUser.name || parsedUser.displayName || parsedUser.email.split("@")[0];
