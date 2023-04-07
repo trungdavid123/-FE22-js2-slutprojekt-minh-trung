@@ -135,8 +135,6 @@ onSnapshot(colRef, (snapshot) => {
 })
 
 
-
-
 const showPosts = (posts: Post[]) => {
     container.innerHTML = "";
 
@@ -162,15 +160,6 @@ const showPosts = (posts: Post[]) => {
         container.innerHTML += element;
     })
 }
-
-signOutBtn.addEventListener('click', () => {
-    signOut(auth).then(() => {
-        window.location.href = '/';
-        localStorage.removeItem('user');
-    }).catch((error) => {
-        console.log(error.message);
-    })
-})
 
 function showSuggestedAccounts() {
     onSnapshot(usersRef, (snapshot) => {
@@ -237,6 +226,15 @@ userInfoContainer.addEventListener('click', (e) => {
     let isMyId = userList.filter((user: ParcedUser) => user.email === parsedUser.email);
 
     window.location.href = `../profile/profile.html?id=${isMyId[0].id}`;
+})
+
+signOutBtn.addEventListener('click', () => {
+    signOut(auth).then(() => {
+        window.location.href = '/';
+        localStorage.removeItem('user');
+    }).catch((error) => {
+        console.log(error.message);
+    })
 })
 
 showSuggestedAccounts()
