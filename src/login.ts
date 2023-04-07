@@ -1,6 +1,6 @@
 import { getAuth, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { showMsg } from "./utils/showMsg";
-import {  collection, doc, getFirestore, setDoc } from "firebase/firestore";
+import { collection, doc, getFirestore, setDoc } from "firebase/firestore";
 
 const submitBtn = document.getElementById("submit-btn") as HTMLButtonElement;
 const emailInput = document.getElementById("email-input") as HTMLInputElement;
@@ -11,7 +11,7 @@ const provider = new GoogleAuthProvider();
 const db = getFirestore();
 const user = localStorage.getItem('user');
 
-if (user) window.location.href = '/pages/home/home.html';
+if (user) window.location.href = './pages/home/home.html';
 
 
 submitBtn?.addEventListener('click', () => {
@@ -39,7 +39,7 @@ ggBtn.addEventListener('click', () => {
       const spinner = document.querySelector('.spinner-border') as HTMLElement;
       const usersRef = collection(db, "users");
       const userDocRef = doc(usersRef, user.uid);
-      
+
       setDoc(userDocRef, {
         email: user.email,
         displayName: user.displayName,
@@ -53,7 +53,7 @@ ggBtn.addEventListener('click', () => {
       localStorage.setItem('user', JSON.stringify(user));
       console.log("User logged in: ", user);
 
-      
+
       setTimeout(() => {
         blurBg.style.display = 'none';
         spinner.style.display = 'none';
