@@ -230,7 +230,7 @@ userInfoContainer.addEventListener('click', (e) => {
 
 signOutBtn.addEventListener('click', () => {
     signOut(auth).then(() => {
-        window.location.href = '/';
+        window.location.href = '../../index.html';
         localStorage.removeItem('user');
     }).catch((error) => {
         console.log(error.message);
