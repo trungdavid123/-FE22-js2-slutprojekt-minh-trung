@@ -11,7 +11,6 @@ const provider = new GoogleAuthProvider();
 const db = getFirestore();
 const user = localStorage.getItem('user');
 
-if (user) window.location.href = './pages/home/home.html';
 
 
 submitBtn?.addEventListener('click', () => {
@@ -66,3 +65,4 @@ ggBtn.addEventListener('click', () => {
 });
 
 
+if (user) window.location.href = './pages/home/home.html';
