@@ -1,0 +1,146 @@
+body {
+    background-color: #f0f2f5;
+}
+
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.avatar {
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.user-name {
+    margin-bottom: 0;
+    font-weight: 600;
+}
+
+.user {
+    cursor: pointer;
+}
+
+.icon-flag {
+    color: green;
+}
+
+.sign-out {
+    outline: none;
+    border: 0;
+    background: none;
+    font-weight: 700;
+    color: red;
+}
+
+.sign-out i {
+    font-size: 1.4rem;
+}
+
+.bi-heart {
+    cursor: pointer;
+    font-size: 1.4rem;
+}
+
+.bi-heart-fill {
+    color: red;
+    cursor: pointer;
+    font-size: 1.4rem;
+}
+
+
+.profile-main {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+    position: relative;
+
+}
+
+.avatar-profile {
+    position: absolute;
+    top: 50px;
+    left: 30px;
+}
+
+.avatar-profile img {
+    width: 100px;
+    border-radius: 50%;
+}
+
+.main {
+    margin-top: 1rem;
+    width: 100%;
+    height: 300px;
+}
+
+.info {
+    height: 70%;
+    background-color: aliceblue;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.bg-profile {
+    background-color: beige;
+    height: 40%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.info h3 {
+    margin-top: 60px;
+    margin-left: 1rem;
+}
+
+.hero {
+    display: flex;
+}
+
+.img-collection {
+    margin-top: 1rem;
+    width: 35%;
+}
+
+.img-container {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.img-container img {
+    border-radius: 8px;
+    width: 110px;
+    margin-top: .6rem;
+    object-fit: cover;
+    object-position: center;
+}
+
+.posts-container {
+    margin-top: 1rem;
+}
+
+.img-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.delete-btn {
+    position: absolute;
+    top:30px;
+    right:20px;
+}
+
+.delete-btn span {
+    background-color: red;
+    padding: .8rem 1rem;
+    cursor: pointer;
+    border-radius: 8px;
+    color: white;
+    font-weight: 600;
+}
