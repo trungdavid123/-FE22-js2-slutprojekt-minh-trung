@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "dev": "parcel src/pages/home/home.html src/pages/profile/profile.html src/index.html ",
-    "build": "parcel build src/pages/home/home.html src/pages/profile/profile.html src/index.html --dist-dir docs --public-url /-FE22-js2-slutprojekt-minh-trung/",
+    "dev": "parcel src/pages/home/home.html src/pages/profile/profile.html src/index.html --no-source-maps --detailed-report",
+    "build": "parcel build src/pages/home/home.html src/pages/profile/profile.html src/index.html --dist-dir docs --public-url /-FE22-js2-slutprojekt-minh-trung/ --no-source-maps --detailed-report",
     "clean": "del-cli ./.parcel-cache ./docs ./dist"
   },
   "keywords": [],
